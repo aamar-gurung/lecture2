@@ -5,7 +5,7 @@ import { Rhino3dmLoader } from 'https://cdn.jsdelivr.net/npm/three@0.124.0/examp
 
 // declare variables to store scene, camera, and renderer
 let scene, camera, renderer
-const model = 'Rhino_Logo.3dm'
+const model = 'ring.3dm'
 
 // call functions
 init()
@@ -15,7 +15,7 @@ animate()
 function init () {
 
     // Rhino models are z-up, so set this as the default
-    THREE.Object3D.DefaultUp = new THREE.Vector3( 0, 0, 1 );
+    THREE.Object3D.DefaultUp = new THREE.Vector3( 0, 0, 1 )
 
     // create a scene and a camera
     scene = new THREE.Scene()
@@ -43,7 +43,7 @@ function init () {
     loader.load( model, function ( object ) {
 
         // uncomment to hide spinner when model loads
-        // document.getElementById('loader').remove()
+        document.getElementById('loader').remove()
         scene.add( object )
 
     } )
