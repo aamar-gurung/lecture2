@@ -5,7 +5,7 @@ import { Rhino3dmLoader } from 'https://cdn.jsdelivr.net/npm/three@0.124.0/examp
 
 // declare variables to store scene, camera, and renderer
 let scene, camera, renderer
-const model = 'ring.3dm'
+const model = 'levels_glass.3dm'
 
 // call functions
 init()
