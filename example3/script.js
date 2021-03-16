@@ -27,8 +27,8 @@ function init() {
 
     const controls = new OrbitControls( camera, renderer.domElement )
 
-    const directionalLight = new THREE.DirectionalLight( 0xffffff )
-    directionalLight.position.set( 0, 0, 2 )
+    const directionalLight = new THREE.DirectionalLight( 0xcccccc )
+    directionalLight.position.set( 2, 2, 5 )
     directionalLight.castShadow = true
     directionalLight.intensity = 2
     scene.add( directionalLight )
