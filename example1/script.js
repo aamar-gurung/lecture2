@@ -20,10 +20,17 @@ const controls = new OrbitControls( camera, renderer.domElement );
 // Create an object and add it to the scene:
 
 // 1. Create the geometry:
-const geometry = new THREE.TorusKnotBufferGeometry( 10, 3, 100, 16 )
+const points = [];
+for ( let i = 0; i < 10; i ++ ) {
+	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+}
+const geometry = new THREE.LatheBufferGeometry( points );
+const material = new THREE.MeshNormalMaterial();
+const lathe = new THREE.Mesh( geometry, material );
+scene.add( lathe );
 
 // 2. Create the material:
-const material = new THREE.MeshNormalMaterial()
+//const material = new THREE.MeshNormalMaterial()
 
 // 3. Create the object
 const torus = new THREE.Mesh( geometry, material )
